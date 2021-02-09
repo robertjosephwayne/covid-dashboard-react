@@ -1,23 +1,22 @@
 {
   "files": {
     "main.css": "/covid-dashboard-react/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/covid-dashboard-react/static/js/main.c79b9268.chunk.js",
-    "main.js.map": "/covid-dashboard-react/static/js/main.c79b9268.chunk.js.map",
-    "runtime-main.js": "/covid-dashboard-react/static/js/runtime-main.0e83b3a2.js",
-    "runtime-main.js.map": "/covid-dashboard-react/static/js/runtime-main.0e83b3a2.js.map",
-    "static/js/2.ed0ff45b.chunk.js": "/covid-dashboard-react/static/js/2.ed0ff45b.chunk.js",
-    "static/js/2.ed0ff45b.chunk.js.map": "/covid-dashboard-react/static/js/2.ed0ff45b.chunk.js.map",
-    "static/js/3.c1a83260.chunk.js": "/covid-dashboard-react/static/js/3.c1a83260.chunk.js",
-    "static/js/3.c1a83260.chunk.js.map": "/covid-dashboard-react/static/js/3.c1a83260.chunk.js.map",
+    "main.js": "/covid-dashboard-react/static/js/main.035b9948.chunk.js",
+    "main.js.map": "/covid-dashboard-react/static/js/main.035b9948.chunk.js.map",
+    "runtime-main.js": "/covid-dashboard-react/static/js/runtime-main.48565c75.js",
+    "runtime-main.js.map": "/covid-dashboard-react/static/js/runtime-main.48565c75.js.map",
+    "static/js/2.91c9ffc4.chunk.js": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js",
+    "static/js/2.91c9ffc4.chunk.js.map": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js.map",
+    "static/js/3.2dd17d38.chunk.js": "/covid-dashboard-react/static/js/3.2dd17d38.chunk.js",
+    "static/js/3.2dd17d38.chunk.js.map": "/covid-dashboard-react/static/js/3.2dd17d38.chunk.js.map",
     "index.html": "/covid-dashboard-react/index.html",
     "static/css/main.8c8b27cf.chunk.css.map": "/covid-dashboard-react/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.ed0ff45b.chunk.js.LICENSE.txt": "/covid-dashboard-react/static/js/2.ed0ff45b.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/covid-dashboard-react/static/media/logo.6ce24c58.svg"
+    "static/js/2.91c9ffc4.chunk.js.LICENSE.txt": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e83b3a2.js",
-    "static/js/2.ed0ff45b.chunk.js",
+    "static/js/runtime-main.48565c75.js",
+    "static/js/2.91c9ffc4.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.c79b9268.chunk.js"
+    "static/js/main.035b9948.chunk.js"
   ]
 }
