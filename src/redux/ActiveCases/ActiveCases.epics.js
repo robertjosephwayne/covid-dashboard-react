@@ -7,7 +7,7 @@ export const fetchActiveCasesEpic = (action$) =>
   action$.pipe(
     ofType(ActiveCasesActions.fetchActiveCases),
     mergeMap((action) =>
-      ajax('http://localhost:3000/active-cases').pipe(
+      ajax('https://covid-dashboard-api-nest.herokuapp.com/active-cases').pipe(
         map((response) => {
           const activeCasesDaily = getActiveCasesDaily(response);
           return ActiveCasesActions.fetchActiveCasesSuccess({
