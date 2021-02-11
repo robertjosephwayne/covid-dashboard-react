@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="flex flex-col h-screen">
         <TopAppBar title="Covid Dashboard" />
-        <div className="flex-grow my-12">
+        <div className="flex-grow mt-2">
           <DailyChartsContainer />
         </div>
       </div>
