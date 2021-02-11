@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/covid-dashboard-react/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/covid-dashboard-react/static/js/main.972623a8.chunk.js",
-    "main.js.map": "/covid-dashboard-react/static/js/main.972623a8.chunk.js.map",
-    "runtime-main.js": "/covid-dashboard-react/static/js/runtime-main.48565c75.js",
-    "runtime-main.js.map": "/covid-dashboard-react/static/js/runtime-main.48565c75.js.map",
-    "static/js/2.91c9ffc4.chunk.js": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js",
-    "static/js/2.91c9ffc4.chunk.js.map": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js.map",
-    "static/js/3.2dd17d38.chunk.js": "/covid-dashboard-react/static/js/3.2dd17d38.chunk.js",
-    "static/js/3.2dd17d38.chunk.js.map": "/covid-dashboard-react/static/js/3.2dd17d38.chunk.js.map",
+    "main.css": "/covid-dashboard-react/static/css/main.8f92f20b.chunk.css",
+    "main.js": "/covid-dashboard-react/static/js/main.68004781.chunk.js",
+    "main.js.map": "/covid-dashboard-react/static/js/main.68004781.chunk.js.map",
+    "runtime-main.js": "/covid-dashboard-react/static/js/runtime-main.237b0b03.js",
+    "runtime-main.js.map": "/covid-dashboard-react/static/js/runtime-main.237b0b03.js.map",
+    "static/js/2.0a7ab3a1.chunk.js": "/covid-dashboard-react/static/js/2.0a7ab3a1.chunk.js",
+    "static/js/2.0a7ab3a1.chunk.js.map": "/covid-dashboard-react/static/js/2.0a7ab3a1.chunk.js.map",
+    "static/js/3.490528a0.chunk.js": "/covid-dashboard-react/static/js/3.490528a0.chunk.js",
+    "static/js/3.490528a0.chunk.js.map": "/covid-dashboard-react/static/js/3.490528a0.chunk.js.map",
     "index.html": "/covid-dashboard-react/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/covid-dashboard-react/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.91c9ffc4.chunk.js.LICENSE.txt": "/covid-dashboard-react/static/js/2.91c9ffc4.chunk.js.LICENSE.txt"
+    "static/css/main.8f92f20b.chunk.css.map": "/covid-dashboard-react/static/css/main.8f92f20b.chunk.css.map",
+    "static/js/2.0a7ab3a1.chunk.js.LICENSE.txt": "/covid-dashboard-react/static/js/2.0a7ab3a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.48565c75.js",
-    "static/js/2.91c9ffc4.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.972623a8.chunk.js"
+    "static/js/runtime-main.237b0b03.js",
+    "static/js/2.0a7ab3a1.chunk.js",
+    "static/css/main.8f92f20b.chunk.css",
+    "static/js/main.68004781.chunk.js"
   ]
 }
