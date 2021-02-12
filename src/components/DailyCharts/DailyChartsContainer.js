@@ -97,7 +97,7 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
     <ThemeProvider theme={theme}>
       <div className="flex flex-col items-center w-full h-full">
         <h1 className="mb-6 text-xl font-bold text-center">{chartTitle}</h1>
-        <ResponsiveContainer width="80%" height="60%">
+        <ResponsiveContainer width="80%" height={375}>
           <LineChart data={data}>
             <Line
               type="monotone"
