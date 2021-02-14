@@ -142,22 +142,24 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
           </LineChart>
         </ResponsiveContainer>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-wrap justify-center sm:flex-nowrap sm:space-x-6">
           <ChartDatePicker
+            className="mx-2"
             onChange={handleStartDateChange}
             label="Start Date"
             selectedDate={startDate}
           />
           <ChartDatePicker
+            className="mx-2"
             onChange={handleEndDateChange}
             label="End Date"
             selectedDate={endDate}
           />
         </div>
 
-        <div className="flex items-center my-4 mb-4 space-x-4">
+        <div className="flex flex-wrap justify-center mt-6 mb-2">
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('totalTestResults') && 'font-bold'
             }`}
             onClick={() =>
@@ -166,42 +168,42 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
             Tests
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('positive') && 'font-bold'
             }`}
             onClick={() => changeData('Positive Cases', 'positive')}>
             Positive
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('negative') && 'font-bold'
             }`}
             onClick={() => changeData('Negative Cases', 'negative')}>
             Negative
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('pending') && 'font-bold'
             }`}
             onClick={() => changeData('Pending Tests', 'pending')}>
             Pending
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('inIcuCurrently') && 'font-bold'
             }`}
             onClick={() => changeData('Currently in ICU', 'inIcuCurrently')}>
             ICU
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('hospitalized') && 'font-bold'
             }`}
             onClick={() => changeData('Hospitalized', 'hospitalized')}>
             Hospitalized
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('onVentilatorCurrently') && 'font-bold'
             }`}
             onClick={() =>
@@ -210,30 +212,31 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
             Ventilators
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-4 focus:outline-none ${
               chartDataKeys.includes('death') && 'font-bold'
             }`}
             onClick={() => changeData('Deaths', 'death')}>
             Deaths
           </button>
         </div>
-        <div className="flex items-center mb-4 space-x-4">
+
+        <div className="flex flex-wrap justify-center my-2">
           <button
-            className={`focus:outline-none ${
+            className={`mx-2 focus:outline-none ${
               chartDataKeys.includes('positiveIncrease') && 'font-bold'
             }`}
             onClick={() => changeData('Positive Increase', 'positiveIncrease')}>
             Positive Increase
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-2 focus:outline-none ${
               chartDataKeys.includes('deathIncrease') && 'font-bold'
             }`}
             onClick={() => changeData('Death Increase', 'deathIncrease')}>
             Death Increase
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-2 focus:outline-none ${
               chartDataKeys.includes('hospitalizedIncrease') && 'font-bold'
             }`}
             onClick={() =>
@@ -242,7 +245,7 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
             Hospitalized Increase
           </button>
           <button
-            className={`focus:outline-none ${
+            className={`mx-2 ocus:outline-none ${
               chartDataKeys.includes('totalTestResultsIncrease') && 'font-bold'
             }`}
             onClick={() =>
