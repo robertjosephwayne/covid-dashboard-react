@@ -245,7 +245,7 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
             Hospitalized Increase
           </button>
           <button
-            className={`mx-2 ocus:outline-none ${
+            className={`mx-2 focus:outline-none ${
               chartDataKeys.includes('totalTestResultsIncrease') && 'font-bold'
             }`}
             onClick={() =>
