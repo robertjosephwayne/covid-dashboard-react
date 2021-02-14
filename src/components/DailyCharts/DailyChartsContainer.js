@@ -16,10 +16,25 @@ const theme = createMuiTheme({
 });
 
 function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
-  const [chartTitle, setChartTitle] = useState('Positive Cases');
-  const [chartDataKey, setChartDataKey] = useState('positive');
+  const [chartTitle, setChartTitle] = useState('United States');
   const [startDate, setStartDate] = useState(new Date(2020, 1, 1));
   const [endDate, setEndDate] = useState(new Date(2021, 12, 31));
+  const [chartDataKeys, setChartDataKeys] = useState(['positive']);
+
+  const lineColors = [
+    '#673ab7',
+    '#3f51b5',
+    '#2196f3',
+    '#00bcd4',
+    '#009688',
+    '#8bc34a',
+    '#cddc39',
+    '#ffc107',
+    '#607d8b',
+    '#795548',
+    '#880e4f',
+    '#9e9e9e',
+  ];
 
   useEffect(() => {
     console.log('useEffect: fetching active cases');
@@ -49,9 +64,21 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
     return formatTooltipNumber(value);
   };
 
-  const changeData = (title, dataKey) => {
-    setChartTitle(title);
-    setChartDataKey(dataKey);
+  const changeData = (title, toggledDataKey) => {
+    // setChartTitle(title);
+    // setChartDataKey(dataKey);
+    if (chartDataKeys.includes(toggledDataKey)) {
+      const updatedKeys = chartDataKeys.filter(
+        (dataKey) => dataKey !== toggledDataKey,
+      );
+      setChartDataKeys(updatedKeys);
+    } else {
+      addChartLine(toggledDataKey);
+    }
+  };
+
+  const addChartLine = (dataKey) => {
+    setChartDataKeys([...chartDataKeys, dataKey]);
   };
 
   const handleStartDateChange = (event) => {
@@ -93,18 +120,23 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
       });
   }, [activeCasesDaily, startDate, endDate]);
 
+  const renderLines = chartDataKeys.map((chartDataKey, i) => (
+    <Line
+      key={`line-${chartDataKey}`}
+      type="monotone"
+      stroke={lineColors[i]}
+      dataKey={chartDataKey}
+      dot={false}
+    />
+  ));
+
   return (
     <ThemeProvider theme={theme}>
       <div className="flex flex-col items-center w-full h-full">
         <h1 className="mb-6 text-xl font-bold text-center">{chartTitle}</h1>
         <ResponsiveContainer width="80%" height={375}>
           <LineChart data={data}>
-            <Line
-              type="monotone"
-              dataKey={chartDataKey}
-              stroke="#8884d8"
-              dot={false}
-            />
+            {renderLines}
             <XAxis dataKey="date" />
             <Tooltip formatter={formatTooltip} />
           </LineChart>
@@ -125,70 +157,94 @@ function DailyChartsContainer({ fetchActiveCases, activeCasesDaily }) {
 
         <div className="flex items-center my-4 mb-4 space-x-4">
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('totalTestResults') && 'font-bold'
+            }`}
             onClick={() =>
               changeData('Total Test Results', 'totalTestResults')
             }>
             Tests
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('positive') && 'font-bold'
+            }`}
             onClick={() => changeData('Positive Cases', 'positive')}>
             Positive
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('negative') && 'font-bold'
+            }`}
             onClick={() => changeData('Negative Cases', 'negative')}>
             Negative
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('pending') && 'font-bold'
+            }`}
             onClick={() => changeData('Pending Tests', 'pending')}>
             Pending
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('inIcuCurrently') && 'font-bold'
+            }`}
             onClick={() => changeData('Currently in ICU', 'inIcuCurrently')}>
             ICU
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('hospitalized') && 'font-bold'
+            }`}
             onClick={() => changeData('Hospitalized', 'hospitalized')}>
             Hospitalized
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('onVentilatorCurrently') && 'font-bold'
+            }`}
             onClick={() =>
               changeData('Currently on Ventilator', 'onVentilatorCurrently')
             }>
             Ventilators
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('death') && 'font-bold'
+            }`}
             onClick={() => changeData('Deaths', 'death')}>
             Deaths
           </button>
         </div>
         <div className="flex items-center mb-4 space-x-4">
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('positiveIncrease') && 'font-bold'
+            }`}
             onClick={() => changeData('Positive Increase', 'positiveIncrease')}>
             Positive Increase
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('deathIncrease') && 'font-bold'
+            }`}
             onClick={() => changeData('Death Increase', 'deathIncrease')}>
             Death Increase
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('hospitalizedIncrease') && 'font-bold'
+            }`}
             onClick={() =>
               changeData('Hospitalized Increase', 'hospitalizedIncrease')
             }>
             Hospitalized Increase
           </button>
           <button
-            className="focus:outline-none"
+            className={`focus:outline-none ${
+              chartDataKeys.includes('totalTestResultsIncrease') && 'font-bold'
+            }`}
             onClick={() =>
               changeData(
                 'Total Test Results Increase',
